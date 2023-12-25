@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "310384779185",
+    "project_id": "tiptop-40f7e",
+    "storage_bucket": "tiptop-40f7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310384779185:android:1e7e83d25568e066486790",
+        "android_client_info": {
+          "package_name": "com.example.tiptop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqU8L-PRPqOS2xGR1G5xJeWsctL9tJwpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

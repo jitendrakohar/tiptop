@@ -19,6 +19,7 @@ class SearchScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: buttonColor,
           title: TextFormField(
+            enabled: true,
             decoration: const InputDecoration(
               filled: false,
               hintText: 'Search',

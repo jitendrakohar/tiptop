@@ -4,6 +4,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:tiptop/controllers/auth_controller.dart';
 import 'package:tiptop/views/add_video_screen.dart';
+import 'package:tiptop/views/messageScreen.dart';
 import 'package:tiptop/views/screens/profile_screen.dart';
 import 'package:tiptop/views/screens/search_screen.dart';
 import 'package:tiptop/views/screens/video_screen.dart';
@@ -12,12 +13,8 @@ List pages = [
   VideoScreen(),
   SearchScreen(),
   const AddVideoScreen(),
-  Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      Center(child: Text('Messages Screen')),
-    ],
-  ),
+  messageScreen(),
+
   ProfileScreen(uid: authController.user.uid),
 ];
 

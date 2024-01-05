@@ -5,6 +5,7 @@ import 'package:tiptop/models/comment.dart';
 
 class CommentController extends GetxController {
   final Rx<List<Comment>> _comments = Rx<List<Comment>>([]);
+  final Rx<List<Comment>> _commentsvideos = Rx<List<Comment>>([]);
   List<Comment> get comments => _comments.value;
 
   String _postId = "";
@@ -22,7 +23,7 @@ class CommentController extends GetxController {
           .collection('comments')
           .snapshots()
           .map(
-            (QuerySnapshot query) {
+        (QuerySnapshot query) {
           List<Comment> retValue = [];
           for (var element in query.docs) {
             retValue.add(Comment.fromSnap(element));
@@ -31,6 +32,21 @@ class CommentController extends GetxController {
         },
       ),
     );
+  }
+
+  Rx<int> noOfComment=0.obs;
+  ///get comments on specific videos
+  getCommentAllVideos() async {
+    var uid = authController.user.uid;
+    int collection = await firestore
+        .collection('videos')
+        .doc(_postId)
+        .collection('comments')
+        .snapshots()
+        .length;
+    noOfComment=collection.obs;
+    return collection;
+
   }
 
   postComment(String commentText) async {
@@ -62,10 +78,10 @@ class CommentController extends GetxController {
             .collection('comments')
             .doc('Comment $len')
             .set(
-          comment.toJson(),
-        );
+              comment.toJson(),
+            );
         DocumentSnapshot doc =
-        await firestore.collection('videos').doc(_postId).get();
+            await firestore.collection('videos').doc(_postId).get();
         await firestore.collection('videos').doc(_postId).update({
           'commentCount': (doc.data()! as dynamic)['commentCount'] + 1,
         });

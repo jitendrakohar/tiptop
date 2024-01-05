@@ -1,4 +1,4 @@
-# Tiptop App Maintenance Guide
+# Tiptop App
 
 ## Introduction
 

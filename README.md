@@ -16,7 +16,7 @@ you can download the app here:
 
 ## Videos of the app
 you can watch the app videos:
-[![Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=F4MJp__Z-go&ab_channel=JitendraKohar)
+[![Video](https://img.youtube.com/vi/F4MJp__Z-go/0.jpg)](https://www.youtube.com/watch?v=F4MJp__Z-go&ab_channel=JitendraKohar)
 
 
 

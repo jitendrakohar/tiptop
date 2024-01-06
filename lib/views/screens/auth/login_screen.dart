@@ -121,7 +121,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       child: Text(
                         'Register',
-                        style: TextStyle(fontSize: 20, color: buttonColor),
+                        style: TextStyle(fontSize: 20, color: Colors.deepOrangeAccent),
                       ),
                     ),
                   ],
